@@ -1,16 +1,29 @@
 
 
+
 <!DOCTYPE html>
 <html lang="th">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Resume จักรพรรณ กาแดง นักศึกษาวิศวกรรมคอมพิวเตอร์และปัญญาประดิษฐ์">
+<title>Jakkapan Kadang | Resume</title>
 
-<title>Jakkapan Kadang | Portfolio</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
+:root {
+  --navy: #102b50;
+  --blue: #2463a6;
+  --light-blue: #eaf2fb;
+  --text: #263449;
+  --muted: #718096;
+  --line: #e5eaf0;
+  --white: #ffffff;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -22,256 +35,436 @@ html {
 }
 
 body {
-  background: #ffffff;
-  color: #253858;
-  font-family: 'Kanit', sans-serif;
+  font-family: 'Prompt', sans-serif;
+  background: #f5f8fc;
+  color: var(--text);
   line-height: 1.8;
 }
 
-nav {
-  position: fixed;
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  width: min(1100px, 90%);
+  margin: auto;
+}
+
+/* NAVIGATION */
+header {
+  background: rgba(255,255,255,.96);
+  border-bottom: 1px solid var(--line);
+  position: sticky;
   top: 0;
-  width: 100%;
   z-index: 100;
-  background: rgba(255,255,255,.94);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid #e7edf5;
-  padding: 16px 8%;
+}
+
+.navbar {
+  min-height: 72px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 20px;
 }
 
 .logo {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 22px;
-  font-weight: 800;
-  color: #174ea6;
-  letter-spacing: 1px;
+  font-size: 23px;
+  font-weight: 700;
+  color: var(--navy);
+  letter-spacing: 2px;
 }
 
 .nav-links {
   display: flex;
-  gap: 25px;
   align-items: center;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: #52647e;
-  font-size: 15px;
-  transition: .3s;
+  gap: 22px;
+  font-size: 13px;
+  color: var(--muted);
 }
 
 .nav-links a:hover {
-  color: #1769d2;
+  color: var(--blue);
 }
 
 .lang-btn {
-  border: none;
-  background: #174ea6;
-  color: white;
-  border-radius: 30px;
-  padding: 8px 20px;
+  border: 1px solid var(--blue);
+  background: white;
+  color: var(--blue);
+  border-radius: 20px;
+  padding: 6px 14px;
   cursor: pointer;
-  font-weight: 600;
+  font-family: inherit;
 }
 
-section {
-  padding: 100px 10%;
-  scroll-margin-top: 75px;
-}
-
+/* HERO */
 .hero {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  background: linear-gradient(180deg,#f5f9ff,#ffffff);
-  padding-top: 130px;
+  background: white;
+  padding: 85px 0;
 }
 
-.profile {
-  width: 190px;
-  height: 190px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 5px solid white;
-  outline: 2px solid #d6e5fa;
-  margin-bottom: 30px;
-  background: #edf3fb;
+.hero-content {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  align-items: center;
+  gap: 60px;
 }
 
 .eyebrow {
-  color: #3478c9;
-  letter-spacing: 3px;
-  font-size: 15px;
-  margin-bottom: 15px;
+  color: var(--blue);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 2px;
 }
 
 .hero h1 {
-  font-family: 'Montserrat','Kanit',sans-serif;
-  font-size: clamp(34px,6vw,65px);
-  line-height: 1.3;
-  color: #174ea6;
-  margin-bottom: 15px;
+  font-size: clamp(32px, 5vw, 52px);
+  line-height: 1.35;
+  color: var(--navy);
+  margin: 14px 0;
 }
 
 .hero h1 span {
-  color: #253858;
+  color: var(--blue);
 }
 
-.hero p {
-  max-width: 720px;
-  color: #687b95;
-  font-size: 18px;
-  margin-bottom: 30px;
-}
-
-.primary-btn {
-  display: inline-block;
-  padding: 12px 30px;
-  background: #174ea6;
-  color: white;
-  text-decoration: none;
-  border-radius: 30px;
-  transition: .3s;
-}
-
-.primary-btn:hover {
-  background: #0d3678;
-  transform: translateY(-3px);
-}
-
-.section-title {
-  font-family: 'Montserrat','Kanit',sans-serif;
-  color: #174ea6;
-  font-size: 30px;
-  margin-bottom: 12px;
-}
-
-.section-subtitle {
-  color: #8796aa;
-  margin-bottom: 35px;
-}
-
-.about-box {
-  background: #f5f8fd;
-  border: 1px solid #e4ebf5;
-  border-radius: 18px;
-  padding: 30px;
-  color: #536780;
-  font-size: 17px;
-}
-
-.education-grid,
-.skill-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(230px,1fr));
-  gap: 20px;
-}
-
-.card {
-  background: white;
-  border: 1px solid #e3eaf4;
-  border-radius: 16px;
-  padding: 25px;
-  box-shadow: 0 8px 25px rgba(30,70,120,.05);
-  transition: .3s;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 30px rgba(30,70,120,.1);
-}
-
-.card h3 {
-  color: #174ea6;
-  margin-bottom: 10px;
-  font-size: 19px;
-}
-
-.card p {
-  color: #718198;
+.hero-description {
+  color: var(--muted);
+  max-width: 550px;
   font-size: 15px;
 }
 
-.year {
+.hero-buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 28px;
+  flex-wrap: wrap;
+}
+
+.btn {
   display: inline-block;
-  color: #3478c9;
-  background: #edf4ff;
-  padding: 3px 12px;
-  border-radius: 20px;
+  padding: 11px 23px;
+  border-radius: 7px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: .2s;
+}
+
+.btn-primary {
+  background: var(--navy);
+  color: white;
+}
+
+.btn-primary:hover {
+  background: var(--blue);
+}
+
+.btn-outline {
+  border: 1px solid var(--blue);
+  color: var(--blue);
+}
+
+.profile-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.profile {
+  width: 270px;
+  height: 320px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 16px;
+  border: 8px solid white;
+  box-shadow: 0 12px 40px rgba(16,43,80,.14);
+  background: var(--light-blue);
+}
+
+/* SECTIONS */
+section {
+  padding: 75px 0;
+}
+
+.section-heading {
+  margin-bottom: 35px;
+}
+
+.section-label {
+  color: var(--blue);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.section-title {
+  color: var(--navy);
+  font-size: 30px;
+  margin-top: 5px;
+}
+
+.section-line {
+  width: 48px;
+  height: 4px;
+  background: var(--blue);
+  border-radius: 5px;
+  margin-top: 12px;
+}
+
+/* ABOUT */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 35px;
+}
+
+.about-text {
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.info-card, .card {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 25px;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--line);
   font-size: 13px;
-  margin-bottom: 12px;
+}
+
+.info-row:last-child {
+  border-bottom: none;
+}
+
+.info-row strong {
+  color: var(--navy);
+}
+
+/* EDUCATION */
+.education {
+  background: white;
+}
+
+.timeline {
+  border-left: 2px solid #c8d9ed;
+  margin-left: 10px;
+  padding-left: 28px;
+}
+
+.timeline-item {
+  position: relative;
+  padding-bottom: 32px;
+}
+
+.timeline-item:last-child {
+  padding-bottom: 0;
+}
+
+.timeline-item::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  background: var(--blue);
+  border: 4px solid #dceafa;
+  border-radius: 50%;
+  position: absolute;
+  left: -37px;
+  top: 7px;
+}
+
+.timeline-item h3 {
+  color: var(--navy);
+  font-size: 18px;
+}
+
+.timeline-item p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.timeline-date {
+  color: var(--blue);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* SKILLS */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
 }
 
 .skill-card {
-  text-align: center;
-  background: #f7faff;
-  border: 1px solid #e5edf8;
-  border-radius: 14px;
-  padding: 22px 12px;
-  color: #315b91;
-  font-weight: 500;
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 23px;
 }
 
-.project-box {
-  background: #f5f8fd;
-  border: 1px dashed #b9cce5;
-  padding: 35px;
-  border-radius: 16px;
-  text-align: center;
-  color: #718198;
+.skill-card h3 {
+  color: var(--navy);
+  font-size: 16px;
+  margin-bottom: 8px;
 }
 
-.contact {
-  background: #f4f8ff;
-  text-align: center;
-}
-
-.contact h2 {
-  font-family: 'Montserrat','Kanit',sans-serif;
-  color: #174ea6;
-  font-size: 32px;
-  margin-bottom: 15px;
-}
-
-.contact p {
-  color: #687b95;
-  margin-bottom: 20px;
-}
-
-.email {
-  display: inline-block;
-  color: #174ea6;
-  font-weight: 600;
-  text-decoration: none;
-  margin-bottom: 15px;
-}
-
-.github {
-  display: block;
-  color: #8b99aa;
+.skill-card p {
   font-size: 13px;
-  text-decoration: none;
-  margin-top: 12px;
+  color: var(--muted);
+}
+
+/* EXPERIENCE */
+.experience {
+  background: white;
+}
+
+.experience-card {
+  max-width: 750px;
+  background: #f8fafd;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 28px;
+}
+
+.experience-card h3 {
+  color: var(--navy);
+  font-size: 21px;
+}
+
+.experience-card p {
+  color: var(--muted);
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+.tag {
+  display: inline-block;
+  background: var(--light-blue);
+  color: var(--blue);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 11px;
+  margin-bottom: 10px;
+}
+
+/* PROJECT */
+.project-card {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 28px;
+}
+
+.project-card h3 {
+  color: var(--navy);
+  margin-bottom: 8px;
+}
+
+.project-card p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* CONTACT */
+.contact {
+  background: var(--navy);
+  color: white;
+}
+
+.contact .section-title {
+  color: white;
+}
+
+.contact .section-label {
+  color: #a9c9ef;
+}
+
+.contact-text {
+  color: #c7d5e6;
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.contact-link {
+  background: rgba(255,255,255,.1);
+  border: 1px solid rgba(255,255,255,.2);
+  padding: 12px 18px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.contact-link:hover {
+  background: rgba(255,255,255,.2);
 }
 
 footer {
   text-align: center;
   padding: 22px;
-  color: #91a0b4;
-  font-size: 13px;
-  background: white;
-  border-top: 1px solid #e7edf5;
+  background: #0b203b;
+  color: #9aabc0;
+  font-size: 12px;
 }
 
-@media(max-width:700px) {
-  nav {
-    padding: 13px 5%;
+/* MOBILE */
+@media (max-width: 750px) {
+  .navbar {
+    padding: 14px 0;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    font-size: 11px;
+  }
+
+  .hero {
+    padding: 55px 0;
+  }
+
+  .hero-content {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .profile-wrap {
+    grid-row: 1;
+  }
+
+  .profile {
+    width: 210px;
+    height: 245px;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  section {
+    padding: 55px 0;
+  }
+}
+
+@media (max-width: 420px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
   }
 
   .logo {
@@ -279,38 +472,23 @@ footer {
   }
 
   .nav-links {
-    gap: 10px;
-  }
-
-  .nav-links a {
-    font-size: 12px;
-  }
-
-  section {
-    padding: 80px 7%;
-  }
-
-  .profile {
-    width: 155px;
-    height: 155px;
-  }
-
-  .hero p {
-    font-size: 15px;
+    gap: 7px;
   }
 }
 
-@media(max-width:420px) {
-  .nav-links {
-    gap: 7px;
+/* PRINT */
+@media print {
+  header, .hero-buttons, footer {
+    display: none;
   }
 
-  .nav-links a {
-    font-size: 11px;
+  body {
+    background: white;
   }
 
-  .lang-btn {
-    padding: 6px 12px;
+  section, .hero {
+    padding: 25px 0;
+    break-inside: avoid;
   }
 }
 </style>
@@ -318,222 +496,326 @@ footer {
 
 <body>
 
-<nav>
-  <div class="logo">PORTFOLIO.</div>
+<header>
+  <div class="container navbar">
+    <a href="#" class="logo">RESUME.</a>
 
-  <div class="nav-links">
-    <a href="#home" data-th="หน้าแรก" data-en="Home">หน้าแรก</a>
-    <a href="#about" data-th="เกี่ยวกับ" data-en="About">เกี่ยวกับ</a>
-    <a href="#education" data-th="การศึกษา" data-en="Education">การศึกษา</a>
-    <a href="#skills" data-th="ทักษะ" data-en="Skills">ทักษะ</a>
-    <button class="lang-btn" onclick="toggleLanguage()">EN</button>
+    <nav class="nav-links">
+      <a href="#about" data-th="เกี่ยวกับผม" data-en="About">เกี่ยวกับผม</a>
+      <a href="#education" data-th="การศึกษา" data-en="Education">การศึกษา</a>
+      <a href="#skills" data-th="ทักษะ" data-en="Skills">ทักษะ</a>
+      <a href="#experience" data-th="ประสบการณ์" data-en="Experience">ประสบการณ์</a>
+      <a href="#contact" data-th="ติดต่อ" data-en="Contact">ติดต่อ</a>
+      <button class="lang-btn" onclick="toggleLanguage()">EN</button>
+    </nav>
   </div>
-</nav>
+</header>
 
-<!-- HOME -->
-<section class="hero" id="home">
+<main>
 
-  <img src="profile.jpg" alt="Jakkapan Kadang" class="profile">
+<!-- HERO -->
+<section class="hero">
+  <div class="container hero-content">
 
-  <div class="eyebrow"
-       data-th="นักศึกษา | ผู้สนใจเทคโนโลยี"
-       data-en="STUDENT | TECHNOLOGY ENTHUSIAST">
-    นักศึกษา | ผู้สนใจเทคโนโลยี
+    <div>
+      <p class="eyebrow" data-th="ประวัติส่วนตัวและประวัติการทำงาน"
+         data-en="PERSONAL PROFILE & WORK EXPERIENCE">
+        ประวัติส่วนตัวและประวัติการทำงาน
+      </p>
+
+      <h1>
+        <span data-th="จักรพรรณ กาแดง"
+              data-en="Jakkapan Kadang">จักรพรรณ กาแดง</span>
+      </h1>
+
+      <p class="hero-description"
+         data-th="นักศึกษาสาขาวิศวกรรมคอมพิวเตอร์และปัญญาประดิษฐ์ มีความสนใจด้านเทคโนโลยี คอมพิวเตอร์ และการพัฒนาทักษะใหม่ ๆ พร้อมเรียนรู้และพัฒนาตนเองอยู่เสมอ"
+         data-en="A Computer Engineering and Artificial Intelligence student interested in technology, computers, and continuous learning.">
+        นักศึกษาสาขาวิศวกรรมคอมพิวเตอร์และปัญญาประดิษฐ์
+        มีความสนใจด้านเทคโนโลยี คอมพิวเตอร์ และการพัฒนาทักษะใหม่ ๆ
+        พร้อมเรียนรู้และพัฒนาตนเองอยู่เสมอ
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#contact" class="btn btn-primary"
+           data-th="ติดต่อฉัน" data-en="Contact Me">ติดต่อฉัน</a>
+        <a href="#education" class="btn btn-outline"
+           data-th="ดูประวัติการศึกษา" data-en="View Education">ดูประวัติการศึกษา</a>
+      </div>
+    </div>
+
+    <div class="profile-wrap">
+      <img src="profile.jpg" alt="จักรพรรณ กาแดง" class="profile">
+    </div>
+
   </div>
-
-  <h1>
-    <span data-th="สวัสดีครับ ผมคือ" data-en="Hello, I'm">
-      สวัสดีครับ ผมคือ
-    </span>
-    <br>
-    Jakkapan Kadang
-  </h1>
-
-  <p
-    data-th="นักศึกษาสาขาวิศวกรรมคอมพิวเตอร์และปัญญาประดิษฐ์ สนใจเทคโนโลยี การพัฒนาเว็บไซต์ และการเรียนรู้สิ่งใหม่ ๆ เพื่อพัฒนาความสามารถของตนเอง"
-    data-en="A Computer Engineering and Artificial Intelligence student interested in technology, web development, and continuous learning.">
-    นักศึกษาสาขาวิศวกรรมคอมพิวเตอร์และปัญญาประดิษฐ์
-    สนใจเทคโนโลยี การพัฒนาเว็บไซต์ และการเรียนรู้สิ่งใหม่ ๆ
-    เพื่อพัฒนาความสามารถของตนเอง
-  </p>
-
-  <a href="#contact" class="primary-btn"
-     data-th="ติดต่อผม →" data-en="Contact Me →">
-    ติดต่อผม →
-  </a>
-
 </section>
 
 <!-- ABOUT -->
 <section id="about">
+  <div class="container">
 
-  <h2 class="section-title"
-      data-th="เกี่ยวกับผม" data-en="About Me">
-    เกี่ยวกับผม
-  </h2>
+    <div class="section-heading">
+      <p class="section-label">01 / ABOUT</p>
+      <h2 class="section-title" data-th="เกี่ยวกับผม" data-en="About Me">เกี่ยวกับผม</h2>
+      <div class="section-line"></div>
+    </div>
 
-  <p class="section-subtitle"
-     data-th="ทำความรู้จักกับผมเพิ่มเติม"
-     data-en="Get to know me">
-    ทำความรู้จักกับผมเพิ่มเติม
-  </p>
+    <div class="about-grid">
 
-  <div class="about-box"
-       data-th="ผมชื่อจักรพรรณ กาแดง ปัจจุบันกำลังศึกษาในสาขาวิศวกรรมคอมพิวเตอร์และปัญญาประดิษฐ์ มีความสนใจด้านเทคโนโลยีสารสนเทศ การเขียนโปรแกรม และการสร้างสรรค์ผลงานผ่านเทคโนโลยี ผมเป็นคนที่พร้อมเรียนรู้และพัฒนาตนเองอยู่เสมอ โดยต้องการนำความรู้ที่ได้รับไปต่อยอดในการทำงานและสร้างผลงานในอนาคต"
-       data-en="My name is Jakkapan Kadang. I am currently studying Computer Engineering and Artificial Intelligence. I am interested in information technology, programming, and creating projects through technology. I am always willing to learn and improve my skills, with the goal of applying my knowledge to future work and projects.">
-    ผมชื่อจักรพรรณ กาแดง ปัจจุบันกำลังศึกษาในสาขาวิศวกรรมคอมพิวเตอร์และปัญญาประดิษฐ์
-    มีความสนใจด้านเทคโนโลยีสารสนเทศ การเขียนโปรแกรม และการสร้างสรรค์ผลงานผ่านเทคโนโลยี
-    ผมเป็นคนที่พร้อมเรียนรู้และพัฒนาตนเองอยู่เสมอ โดยต้องการนำความรู้ที่ได้รับไปต่อยอดในการทำงานและสร้างผลงานในอนาคต
+      <div class="about-text"
+           data-th="ผมเป็นนักศึกษาที่สนใจด้านคอมพิวเตอร์และเทคโนโลยี โดยกำลังศึกษาเกี่ยวกับการเขียนโปรแกรม ระบบคอมพิวเตอร์ และปัญญาประดิษฐ์ ผมให้ความสำคัญกับการเรียนรู้จากการลงมือทำจริง การทำงานร่วมกับผู้อื่น และการพัฒนาตนเองอย่างต่อเนื่อง"
+           data-en="I am a student interested in computers and technology. I am currently learning programming, computer systems, and artificial intelligence. I value practical learning, teamwork, and continuous self-development.">
+        ผมเป็นนักศึกษาที่สนใจด้านคอมพิวเตอร์และเทคโนโลยี
+        โดยกำลังศึกษาเกี่ยวกับการเขียนโปรแกรม ระบบคอมพิวเตอร์
+        และปัญญาประดิษฐ์ ผมให้ความสำคัญกับการเรียนรู้จากการลงมือทำจริง
+        การทำงานร่วมกับผู้อื่น และการพัฒนาตนเองอย่างต่อเนื่อง
+      </div>
+
+      <div class="info-card">
+        <div class="info-row">
+          <strong data-th="ชื่อ" data-en="Name">ชื่อ</strong>
+          <span data-th="จักรพรรณ กาแดง" data-en="Jakkapan Kadang">จักรพรรณ กาแดง</span>
+        </div>
+        <div class="info-row">
+          <strong data-th="สาขา" data-en="Major">สาขา</strong>
+          <span data-th="วิศวกรรมคอมพิวเตอร์และ AI" data-en="Computer Engineering and AI">วิศวกรรมคอมพิวเตอร์และ AI</span>
+        </div>
+        <div class="info-row">
+          <strong data-th="สถาบัน" data-en="Institute">สถาบัน</strong>
+          <span>PIM</span>
+        </div>
+        <div class="info-row">
+          <strong>Email</strong>
+          <span>Jakkapan.gd@gmail.com</span>
+        </div>
+      </div>
+
+    </div>
   </div>
-
 </section>
 
 <!-- EDUCATION -->
-<section id="education">
+<section id="education" class="education">
+  <div class="container">
 
-  <h2 class="section-title"
-      data-th="ประวัติการศึกษา" data-en="Education">
-    ประวัติการศึกษา
-  </h2>
-
-  <p class="section-subtitle"
-     data-th="เส้นทางการเรียนรู้ของผม"
-     data-en="My educational background">
-    เส้นทางการเรียนรู้ของผม
-  </p>
-
-  <div class="education-grid">
-
-    <div class="card">
-      <span class="year">มัธยมศึกษาตอนต้น</span>
-      <h3>โรงเรียนโพนทองพัฒนาวิทยา</h3>
-      <p data-th="สำเร็จการศึกษาระดับมัธยมศึกษาปีที่ 3"
-         data-en="Completed lower secondary education (Grade 9).">
-        สำเร็จการศึกษาระดับมัธยมศึกษาปีที่ 3
-      </p>
+    <div class="section-heading">
+      <p class="section-label">02 / EDUCATION</p>
+      <h2 class="section-title" data-th="ประวัติการศึกษา" data-en="Education">ประวัติการศึกษา</h2>
+      <div class="section-line"></div>
     </div>
 
-    <div class="card">
-      <span class="year">ประกาศนียบัตรวิชาชีพ</span>
-      <h3>วิทยาลัยการอาชีพโพนทอง</h3>
-      <p data-th="สำเร็จการศึกษาระดับ ปวช. 3 สาขาคอมพิวเตอร์ธุรกิจ"
-         data-en="Completed Vocational Certificate (Year 3), Business Computer.">
-        สำเร็จการศึกษาระดับ ปวช. 3
-        สาขาคอมพิวเตอร์ธุรกิจ
-      </p>
-    </div>
+    <div class="timeline">
 
-    <div class="card">
-      <span class="year">ระดับอุดมศึกษา</span>
-      <h3>สถาบันการจัดการปัญญาภิวัฒน์ (PIM)</h3>
-      <p data-th="คณะวิศวกรรมศาสตร์และเทคโนโลยี สาขาวิศวกรรมคอมพิวเตอร์และปัญญาประดิษฐ์"
-         data-en="Faculty of Engineering and Technology, Computer Engineering and Artificial Intelligence.">
-        คณะวิศวกรรมศาสตร์และเทคโนโลยี
-        สาขาวิศวกรรมคอมพิวเตอร์และปัญญาประดิษฐ์
-      </p>
-    </div>
+      <div class="timeline-item">
+        <span class="timeline-date">ปัจจุบัน / CURRENT</span>
+        <h3 data-th="สถาบันการจัดการปัญญาภิวัฒน์ (PIM)"
+            data-en="Panyapiwat Institute of Management (PIM)">
+          สถาบันการจัดการปัญญาภิวัฒน์ (PIM)
+        </h3>
+        <p data-th="คณะวิศวกรรมศาสตร์และเทคโนโลยี"
+           data-en="Faculty of Engineering and Technology">
+          คณะวิศวกรรมศาสตร์และเทคโนโลยี
+        </p>
+        <p data-th="สาขาวิศวกรรมคอมพิวเตอร์และปัญญาประดิษฐ์"
+           data-en="Computer Engineering and Artificial Intelligence">
+          สาขาวิศวกรรมคอมพิวเตอร์และปัญญาประดิษฐ์
+        </p>
+      </div>
 
+      <div class="timeline-item">
+        <h3 data-th="วิทยาลัยการอาชีพโพนทอง"
+            data-en="Phon Thong Industrial and Community Education College">
+          วิทยาลัยการอาชีพโพนทอง
+        </h3>
+        <p data-th="ประกาศนียบัตรวิชาชีพชั้นสูงสุดระดับ ปวช.3"
+           data-en="Vocational Certificate (Year 3)">
+          ระดับประกาศนียบัตรวิชาชีพ (ปวช.3)
+        </p>
+        <p data-th="สาขาคอมพิวเตอร์ธุรกิจ"
+           data-en="Business Computer">
+          สาขาคอมพิวเตอร์ธุรกิจ
+        </p>
+      </div>
+
+      <div class="timeline-item">
+        <h3 data-th="โรงเรียนโพนทองพัฒนาวิทยา"
+            data-en="Phon Thong Phatthana Witthaya School">
+          โรงเรียนโพนทองพัฒนาวิทยา
+        </h3>
+        <p data-th="สำเร็จการศึกษาระดับมัธยมศึกษาตอนต้น (ม.3)"
+           data-en="Completed lower secondary education (Grade 9)">
+          สำเร็จการศึกษาระดับมัธยมศึกษาตอนต้น (ม.3)
+        </p>
+      </div>
+
+    </div>
   </div>
 </section>
 
 <!-- SKILLS -->
 <section id="skills">
+  <div class="container">
 
-  <h2 class="section-title"
-      data-th="ทักษะและความสามารถ"
-      data-en="Skills & Abilities">
-    ทักษะและความสามารถ
-  </h2>
+    <div class="section-heading">
+      <p class="section-label">03 / SKILLS</p>
+      <h2 class="section-title" data-th="ทักษะและความสามารถ" data-en="Skills">ทักษะและความสามารถ</h2>
+      <div class="section-line"></div>
+    </div>
 
-  <p class="section-subtitle"
-     data-th="ความรู้และเครื่องมือที่กำลังเรียนรู้"
-     data-en="Knowledge and tools I am learning">
-    ความรู้และเครื่องมือที่กำลังเรียนรู้
-  </p>
+    <div class="skills-grid">
 
-  <div class="skill-grid">
+      <div class="skill-card">
+        <h3>HTML & CSS</h3>
+        <p data-th="พื้นฐานการสร้างและตกแต่งเว็บไซต์"
+           data-en="Basic website structure and styling">
+          พื้นฐานการสร้างและตกแต่งเว็บไซต์
+        </p>
+      </div>
 
-    <div class="skill-card">HTML & CSS</div>
-    <div class="skill-card">Java</div>
-    <div class="skill-card">Python</div>
-    <div class="skill-card">PHP</div>
-    <div class="skill-card">SQL & Database</div>
-    <div class="skill-card">Microsoft Word</div>
-    <div class="skill-card">Microsoft Excel</div>
-    <div class="skill-card">Microsoft PowerPoint</div>
+      <div class="skill-card">
+        <h3>Java</h3>
+        <p data-th="พื้นฐานการเขียนโปรแกรมและแนวคิด OOP"
+           data-en="Basic programming and OOP concepts">
+          พื้นฐานการเขียนโปรแกรมและแนวคิด OOP
+        </p>
+      </div>
+
+      <div class="skill-card">
+        <h3>Python</h3>
+        <p data-th="พื้นฐานการเขียนโปรแกรมและโครงสร้างข้อมูล"
+           data-en="Basic programming and data structures">
+          พื้นฐานการเขียนโปรแกรมและโครงสร้างข้อมูล
+        </p>
+      </div>
+
+      <div class="skill-card">
+        <h3>PHP</h3>
+        <p data-th="พื้นฐานการเขียนโปรแกรมฝั่งเซิร์ฟเวอร์"
+           data-en="Basic server-side programming">
+          พื้นฐานการเขียนโปรแกรมฝั่งเซิร์ฟเวอร์
+        </p>
+      </div>
+
+      <div class="skill-card">
+        <h3>SQL</h3>
+        <p data-th="พื้นฐานการจัดการฐานข้อมูลและคำสั่ง SQL"
+           data-en="Basic database management and SQL queries">
+          พื้นฐานการจัดการฐานข้อมูลและคำสั่ง SQL
+        </p>
+      </div>
+
+      <div class="skill-card">
+        <h3>Microsoft Office</h3>
+        <p data-th="การใช้งานโปรแกรมสำนักงานและจัดทำเอกสาร"
+           data-en="Office applications and document preparation">
+          การใช้งานโปรแกรมสำนักงานและจัดทำเอกสาร
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" class="experience">
+  <div class="container">
+
+    <div class="section-heading">
+      <p class="section-label">04 / EXPERIENCE</p>
+      <h2 class="section-title" data-th="ประสบการณ์ทำงาน" data-en="Work Experience">ประสบการณ์ทำงาน</h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="experience-card">
+      <span class="tag" data-th="งานพาร์ตไทม์" data-en="Part-time">งานพาร์ตไทม์</span>
+      <h3>7-Eleven</h3>
+      <p data-th="พนักงานพาร์ตไทม์ มีประสบการณ์ในการทำงานในสถานประกอบการจริง ฝึกความรับผิดชอบ การตรงต่อเวลา การทำงานร่วมกับผู้อื่น และการให้บริการลูกค้า"
+         data-en="Part-time employee with real workplace experience, developing responsibility, punctuality, teamwork, and customer service skills.">
+        พนักงานพาร์ตไทม์ มีประสบการณ์ในการทำงานในสถานประกอบการจริง
+        ฝึกความรับผิดชอบ การตรงต่อเวลา การทำงานร่วมกับผู้อื่น
+        และการให้บริการลูกค้า
+      </p>
+    </div>
 
   </div>
-
 </section>
 
 <!-- PROJECTS -->
 <section id="projects">
+  <div class="container">
 
-  <h2 class="section-title"
-      data-th="ผลงานและโปรเจกต์"
-      data-en="Projects">
-    ผลงานและโปรเจกต์
-  </h2>
+    <div class="section-heading">
+      <p class="section-label">05 / PROJECTS</p>
+      <h2 class="section-title" data-th="ผลงานและโปรเจกต์" data-en="Projects">ผลงานและโปรเจกต์</h2>
+      <div class="section-line"></div>
+    </div>
 
-  <p class="section-subtitle"
-     data-th="พื้นที่แสดงผลงานที่ได้เรียนรู้และพัฒนา"
-     data-en="A space to showcase my learning and development">
-    พื้นที่แสดงผลงานที่ได้เรียนรู้และพัฒนา
-  </p>
+    <div class="project-card">
+      <span class="tag" data-th="โปรเจกต์ระหว่างพัฒนา" data-en="In Progress">โปรเจกต์ระหว่างพัฒนา</span>
+      <h3 data-th="เว็บไซต์สื่อการเรียนรู้ด้านเทคโนโลยี"
+          data-en="Technology Learning Website">
+        เว็บไซต์สื่อการเรียนรู้ด้านเทคโนโลยี
+      </h3>
+      <p data-th="แนวคิดการพัฒนาเว็บไซต์แบบโต้ตอบ เพื่อใช้เป็นสื่อการเรียนรู้ด้านคอมพิวเตอร์และโปรแกรม Microsoft Office ช่วยให้ผู้เรียนสามารถศึกษาเนื้อหาและฝึกใช้งานได้ด้วยตนเอง"
+         data-en="An interactive educational website concept for computer skills and Microsoft Office, helping learners study and practice independently.">
+        แนวคิดการพัฒนาเว็บไซต์แบบโต้ตอบ เพื่อใช้เป็นสื่อการเรียนรู้ด้านคอมพิวเตอร์
+        และโปรแกรม Microsoft Office ช่วยให้ผู้เรียนสามารถศึกษาเนื้อหา
+        และฝึกใช้งานได้ด้วยตนเอง
+      </p>
+    </div>
 
-  <div class="project-box"
-       data-th="กำลังรวบรวมและพัฒนาผลงาน เพื่อเพิ่มลงใน Portfolio นี้"
-       data-en="Currently preparing projects to showcase in this portfolio.">
-    กำลังรวบรวมและพัฒนาผลงาน
-    เพื่อเพิ่มลงใน Portfolio นี้
   </div>
-
 </section>
 
 <!-- CONTACT -->
-<section class="contact" id="contact">
+<section id="contact" class="contact">
+  <div class="container">
 
-  <h2 data-th="ติดต่อผม" data-en="Contact Me">
-    ติดต่อผม
-  </h2>
+    <div class="section-heading">
+      <p class="section-label">06 / CONTACT</p>
+      <h2 class="section-title" data-th="ช่องทางการติดต่อ" data-en="Contact">ช่องทางการติดต่อ</h2>
+      <div class="section-line"></div>
+    </div>
 
-  <p
-    data-th="หากต้องการติดต่อหรือพูดคุย สามารถติดต่อผมผ่านช่องทางด้านล่าง"
-    data-en="Feel free to contact me through the following channels.">
-    หากต้องการติดต่อหรือพูดคุย
-    สามารถติดต่อผมผ่านช่องทางด้านล่าง
-  </p>
+    <p class="contact-text"
+       data-th="สามารถติดต่อสอบถามข้อมูลเพิ่มเติมได้ผ่านช่องทางด้านล่าง"
+       data-en="Feel free to contact me through the following channel.">
+      สามารถติดต่อสอบถามข้อมูลเพิ่มเติมได้ผ่านช่องทางด้านล่าง
+    </p>
 
-  <a class="email" href="mailto:Jakkapan.gd@gmail.com">
-    Gmail: Jakkapan.gd@gmail.com
-  </a>
+    <div class="contact-links">
+      <a class="contact-link" href="mailto:Jakkapan.gd@gmail.com">
+        ✉ Jakkapan.gd@gmail.com
+      </a>
+      <a class="contact-link" href="https://github.com/jakkapan152" target="_blank" rel="noopener noreferrer">
+        GitHub: jakkapan152
+      </a>
+    </div>
 
-  <a class="github"
-     href="https://github.com/jakkapan152"
-     target="_blank">
-    GitHub Profile
-  </a>
-
+  </div>
 </section>
+
+</main>
 
 <footer>
   © 2026 Jakkapan Kadang. All Rights Reserved.
 </footer>
 
 <script>
-let currentLanguage = 'th';
+let currentLanguage = "th";
 
 function toggleLanguage() {
-  currentLanguage = currentLanguage === 'th' ? 'en' : 'th';
-
-  document.querySelectorAll('[data-th]').forEach(element => {
-    element.textContent = element.getAttribute('data-' + currentLanguage);
-  });
-
-  document.querySelector('.lang-btn').textContent =
-    currentLanguage === 'th' ? 'EN' : 'TH';
+  currentLanguage = currentLanguage === "th" ? "en" : "th";
 
   document.documentElement.lang = currentLanguage;
+
+  document.querySelectorAll("[data-th]").forEach(function(element) {
+    element.textContent = element.getAttribute("data-" + currentLanguage);
+  });
+
+  document.querySelector(".lang-btn").textContent =
+    currentLanguage === "th" ? "EN" : "TH";
 }
 </script>
 
